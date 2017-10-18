@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Question 4</title>
+<p>Drag the slider for the Min Number and the Max Number. Click Print Prime Number after: </p>
+</head>
+
+<body>
+<div id="slidecontainer">
+Min Number<br><input type="range" min="1" max="1000" value="500" class="slider" id="minRange"><br>
+<p>Value : <span id = "minValue"></span></p><br>
+</div>
+<div id="slidecontainer">
+Max Number<br><input type="range" min="1" max="1000" value="500" class="slider" id="maxRange"><br>
+<p>Value : <span id = "maxValue"></span></p><br>
+</div>
+
+<script>
+var min = document.getElementById("minRange");
+var minOutput = document.getElementById("minValue");
+minOutput.innerHTML = min.value;
+var max = document.getElementById("maxRange");
+var maxOutput = document.getElementById("maxValue");
+maxOutput.innerHTML = max.value;
+min.oninput = function() {
+    minOutput.innerHTML = this.value;
+	}
+max.oninput = function() {
+    maxOutput.innerHTML = this.value;
+	}
+function getPrime(){
+var mins = document.getElementById("minRange").value;
+var maxs = document.getElementById("maxRange").value;
+	while(mins<maxs){	
+	var i = 2;
+	var answer = 0;
+	   do{
+       if (mins % i != 0){
+       answer = 1;}
+       else{
+       answer = 0;}
+	   i++;
+	   }while (answer == 1 && i<mins);
+    
+	   if(answer == 1){
+    document.write(mins + " ");}
+	mins++;	
+	}
+}
+</script>
+<input type = "button" onclick = "getPrime()" value = "Print Prime Number"><br>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Question 1</title>
+<p>Please insert the number of row and columns for the table:</p>
+</head>
+
+<body>
+<script type="text/javascript">
+function createTable(){
+var row = document.getElementById("rowField");
+var col = document.getElementById("colField");
+var rows = parseInt(row.value);
+var cols = parseInt(col.value);
+document.write("<table border = '1px'>");
+for (var i=1;i<=cols;i++){ //coloum
+document.write("<tr style='height:30px;'>");
+for(var j = 1; j<= rows;j++){ //row
+document.write("<td>" + i*j + "</td>");
+}
+document.write("</tr>");
+}
+document.write("</table>");
+}
+</script>
+Row<br><input type = "text" id ="rowField" size = "10"><br>
+Col<br><input type = "text" id ="colField" size = "10"><br>
+<input type = "button" onclick = "createTable()" value = "Make Table"><br>
+</body>
+</html>

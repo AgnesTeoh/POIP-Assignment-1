@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Question 3</title>
+<p>Pick an emoji and input the amount of times it should be displayed: </p>
+</head>
+
+<body>
+<style>
+select {
+  font-family: 'FontAwesome', 'Second Font name'
+}
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+<select id="myEmoji">
+<option>&#xf042;</option>
+<option>&#xf043;</option>
+<option>&#xf044;</option>
+<option>&#xf045;</option>
+<option>&#xf046;</option>
+</select></br>
+Number of prints: <br><input type = "text" id = "numberField" size = "10"><br>
+<input type = "button" onclick ="show()" value = "Show">
+<script type="text/javascript">
+function show(){
+var start = 0;
+var num = document.getElementById("numberField");
+var nump = parseInt(num.value);
+var x = document.getElementById("myEmoji").value;
+while(start < nump){
+document.writeln(x);
+start++;
+}
+}
+</script>
+</body>
+</html>

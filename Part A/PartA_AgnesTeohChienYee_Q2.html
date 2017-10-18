@@ -1,0 +1,17 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Question 2</title>
+<p>Select the rectangle to open Colour Picker and click Change to switch background colour:</p>
+</head>
+
+<body>
+<input type = "button" onclick ="change()" value = "Change">
+<input type = "color" id = "colour">
+<script>
+function change(){
+var color = document.getElementById("colour");
+document.body.style.backgroundColor = color.value;}
+</script>
+</body>
+</html>
